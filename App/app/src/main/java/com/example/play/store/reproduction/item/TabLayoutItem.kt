@@ -7,7 +7,7 @@ import com.example.play.store.reproduction.databinding.ItemTabLayoutBinding
 import com.xwray.groupie.Item
 import com.xwray.groupie.viewbinding.GroupieViewHolder
 
-class TabLayoutItem(
+data class TabLayoutItem(
     private val id: TabLayoutItemId,
     val tabNames: List<String>
 ) : BaseItem<ItemTabLayoutBinding, TabLayoutItemPayload>(

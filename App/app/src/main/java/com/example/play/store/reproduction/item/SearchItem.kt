@@ -10,6 +10,7 @@ import com.xwray.groupie.viewbinding.GroupieViewHolder
 
 data class SearchItem(
     private val id: SearchItemId,
+    val searchText: String,
     val userIconURL: String,
     val onSearchViewClick: () -> Unit,
     val onVoiceImageViewClick: () -> Unit,
@@ -20,6 +21,7 @@ data class SearchItem(
     override fun getPayload(): SearchItemPayload {
         return SearchItemPayload(
             userIconURL,
+            searchText,
             onSearchViewClick,
             onVoiceImageViewClick,
             onUserTextViewClick,
@@ -34,6 +36,7 @@ data class SearchItem(
     }
 
     override fun update(viewBinding: ItemSearchBinding, payload: SearchItemPayload) {
+        viewBinding.itemSearchSearchTextView.text = payload.searchText
         viewBinding.itemSearchSearchIconImageView.setOnClickListener { payload.onSearchViewClick() }
         viewBinding.itemSearchSearchTextView.setOnClickListener { payload.onSearchViewClick() }
         viewBinding.itemSearchVoiceIconImageView.setOnClickListener { payload.onVoiceImageViewClick() }

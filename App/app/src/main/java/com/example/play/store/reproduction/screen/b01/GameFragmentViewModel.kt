@@ -20,6 +20,7 @@ class GameFragmentViewModel : BaseFragmentViewModel() {
                     listOf(
                         SearchItem(
                             id = SearchItemId.Game,
+                            searchText = "アプリやゲームを検索する",
                             userIconURL = "A",
                             onSearchViewClick = {},
                             onVoiceImageViewClick = {},

@@ -48,6 +48,8 @@ dependencies {
     implementation 'com.github.lisawray.groupie:groupie:2.10.0'
     implementation 'com.github.lisawray.groupie:groupie-viewbinding:2.10.0'
 
+    implementation 'com.github.qiujayen:sticky-layoutmanager:1.0.1'
+
     implementation 'com.google.android.material:material:1.4.0'
 
     implementation "io.insert-koin:koin-android:3.1.2"

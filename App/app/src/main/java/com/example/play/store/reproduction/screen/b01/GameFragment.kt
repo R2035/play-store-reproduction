@@ -5,18 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.play.store.reproduction.base.BaseFragment
 import com.example.play.store.reproduction.databinding.FragmentGameBinding
-import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.GroupieViewHolder
+import com.example.play.store.reproduction.view.StickyHeaderGroupAdapter
+import com.jay.widget.StickyHeadersLinearLayoutManager
 import kotlinx.coroutines.flow.collect
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class GameFragment : BaseFragment<GameFragmentViewModel, FragmentGameBinding>() {
     override val viewModel: GameFragmentViewModel by viewModel()
 
-    private val groupAdapter = GroupAdapter<GroupieViewHolder>()
+    private val groupAdapter = StickyHeaderGroupAdapter()
 
     override fun inflate(inflater: LayoutInflater, root: ViewGroup?, attachToParent: Boolean): FragmentGameBinding {
         return FragmentGameBinding.inflate(inflater, root, attachToParent)
@@ -36,6 +35,6 @@ class GameFragment : BaseFragment<GameFragmentViewModel, FragmentGameBinding>() 
         super.onViewCreated(view, savedInstanceState)
 
         requireBinding().gameRecyclerView.adapter = groupAdapter
-        requireBinding().gameRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        requireBinding().gameRecyclerView.layoutManager = StickyHeadersLinearLayoutManager<StickyHeaderGroupAdapter>(requireContext())
     }
 }

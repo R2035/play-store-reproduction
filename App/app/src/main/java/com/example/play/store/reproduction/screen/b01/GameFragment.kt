@@ -12,6 +12,9 @@ import com.jay.widget.StickyHeadersLinearLayoutManager
 import kotlinx.coroutines.flow.collect
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+/**
+ * B01 ゲーム
+ */
 class GameFragment : BaseFragment<GameFragmentViewModel, FragmentGameBinding>() {
     override val viewModel: GameFragmentViewModel by viewModel()
 

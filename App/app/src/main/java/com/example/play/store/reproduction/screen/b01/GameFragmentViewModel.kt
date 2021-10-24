@@ -4,6 +4,8 @@ import com.example.play.store.reproduction.base.BaseFragmentViewModel
 import com.example.play.store.reproduction.item.SearchItem
 import com.example.play.store.reproduction.item.SearchItemId
 import com.example.play.store.reproduction.item.SpecialFeatureItem
+import com.example.play.store.reproduction.item.TabLayoutItem
+import com.example.play.store.reproduction.item.TabLayoutItemId
 import com.xwray.groupie.Section
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -22,6 +24,16 @@ class GameFragmentViewModel : BaseFragmentViewModel() {
                             onSearchViewClick = {},
                             onVoiceImageViewClick = {},
                             onUserTextViewClick = {},
+                        ),
+                        TabLayoutItem(
+                            id = TabLayoutItemId.Game,
+                            tabNames = listOf(
+                                "おすすめ",
+                                "ランキング",
+                                "子供",
+                                "カテゴリ",
+                                "エディターのおすすめ",
+                            )
                         ),
                         SpecialFeatureItem(
                             id = "SpecialFeatureItem0",

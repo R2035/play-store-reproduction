@@ -8,10 +8,15 @@
         android:id="@+id/item_tab_tab_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/item_tab_divider"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="scrollable"
+        app:tabPaddingStart="32dp"
+        app:tabPaddingEnd="32dp"
+        app:tabRippleColor="@null" />
 
     <View
         android:id="@+id/item_tab_divider"

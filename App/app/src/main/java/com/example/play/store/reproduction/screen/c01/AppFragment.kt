@@ -12,6 +12,9 @@ import com.jay.widget.StickyHeadersLinearLayoutManager
 import kotlinx.coroutines.flow.collect
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+/**
+ * C01 アプリ
+ */
 class AppFragment : BaseFragment<AppFragmentViewModel, FragmentAppBinding>() {
     override val viewModel: AppFragmentViewModel by viewModel()
 

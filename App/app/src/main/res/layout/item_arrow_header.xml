@@ -13,7 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="4dp"
         android:ellipsize="end"
@@ -24,14 +24,14 @@
         app:layout_constraintEnd_toStartOf="@id/item_arrow_header_arrow_image_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_goneMarginBottom="8dp"
+        app:layout_goneMarginBottom="16dp"
         tools:text="タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル" />
 
     <TextView
         android:id="@+id/item_arrow_header_subtitle_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:ellipsize="end"
         android:lines="1"
         android:textSize="11sp"

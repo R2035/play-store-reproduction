@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_home"
+    app:startDestination="@id/b01">
+
+    <fragment
+        android:id="@+id/b01"
+        android:name="com.example.play.store.reproduction.screen.b01.GameFragment" />
+
+    <fragment
+        android:id="@+id/c01"
+        android:name="com.example.play.store.reproduction.screen.c01.AppFragment" />
+
+    <fragment
+        android:id="@+id/d01"
+        android:name="com.example.play.store.reproduction.screen.d01.BookFragment" />
+
+    <fragment
+        android:id="@+id/e01"
+        android:name="com.example.play.store.reproduction.screen.e01.MovieFragment" />
+</navigation>

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">PlayStoreReproduction</string>
+
+    <string name="b01_title">ゲーム</string>
+
+    <string name="c01_title">アプリ</string>
+
+    <string name="d01_title">書籍</string>
+
+    <string name="e01_title">映画&amp;TV</string>
 </resources>

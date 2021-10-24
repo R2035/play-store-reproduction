@@ -1,5 +1,6 @@
 package com.example.play.store.reproduction.item
 
+import android.graphics.drawable.ColorDrawable
 import android.view.View
 import com.example.play.store.reproduction.R
 import com.example.play.store.reproduction.base.BaseItem
@@ -9,7 +10,7 @@ import com.xwray.groupie.viewbinding.GroupieViewHolder
 
 data class SearchItem(
     private val id: SearchItemId,
-    val userName: String,
+    val userIconURL: String,
     val onSearchViewClick: () -> Unit,
     val onVoiceImageViewClick: () -> Unit,
     val onUserTextViewClick: () -> Unit,
@@ -18,7 +19,7 @@ data class SearchItem(
 ) {
     override fun getPayload(): SearchItemPayload {
         return SearchItemPayload(
-            userName,
+            userIconURL,
             onSearchViewClick,
             onVoiceImageViewClick,
             onUserTextViewClick,
@@ -36,8 +37,10 @@ data class SearchItem(
         viewBinding.itemSearchSearchIconImageView.setOnClickListener { payload.onSearchViewClick() }
         viewBinding.itemSearchSearchTextView.setOnClickListener { payload.onSearchViewClick() }
         viewBinding.itemSearchVoiceIconImageView.setOnClickListener { payload.onVoiceImageViewClick() }
-        viewBinding.itemSearchUserNameTextView.setOnClickListener { payload.onUserTextViewClick() }
-        viewBinding.itemSearchUserNameTextView.text = payload.userName
+        viewBinding.itemSearchUserIconImageView.setOnClickListener { payload.onUserTextViewClick() }
+        // TODO: アイコンをURLから取得して表示する
+        val context = viewBinding.root.context
+        viewBinding.itemSearchUserIconImageView.background = ColorDrawable(context.getColor(R.color.purple_200))
     }
 
     override fun getLayout(): Int {
@@ -52,7 +55,7 @@ data class SearchItem(
         viewHolder.binding.itemSearchSearchIconImageView.setOnClickListener(null)
         viewHolder.binding.itemSearchSearchTextView.setOnClickListener(null)
         viewHolder.binding.itemSearchVoiceIconImageView.setOnClickListener(null)
-        viewHolder.binding.itemSearchUserNameTextView.setOnClickListener(null)
+        viewHolder.binding.itemSearchUserIconImageView.setOnClickListener(null)
         super.unbind(viewHolder)
     }
 }
